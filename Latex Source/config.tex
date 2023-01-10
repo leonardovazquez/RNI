@@ -1,0 +1,97 @@
+% Paquetes de generalidades
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Para escribir tildes y eñes
+\usepackage[utf8]{inputenc}   
+
+% Para que los títulos de figuras, tablas y otros estén en español
+\usepackage[spanish,es-noquoting]{babel} 
+	% Cambiar nombre a tablas
+	\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}	
+    % Cambiar nombre a lista de tablas		
+	\addto\captionsspanish{\renewcommand{\listtablename}{Índice de tablas}}	
+    % Cambiar nombre a capítulos
+	\addto\captionsspanish{\renewcommand{\chaptername}{Sección}}
+
+% Para que la bibligrafía esté en español
+
+\decimalpoint
+%\usepackage[spanish,es-tabla]{babel}
+
+%\usepackage[backend=bibtex]{biblatex}
+%\addbibresource{referencias.bib}
+
+\decimalpoint
+
+% Tamaño del área de escritura de la página	
+\usepackage{geometry}                         
+	\geometry{left=18mm,right=18mm,top=23mm,bottom=23mm} 	
+
+% Paquetes para matemática
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Los paquetes ams son desarrollados por la American Mathematical Society y mejoran la escritura de fórmulas y símbolos matemáticos.
+\usepackage{amsmath}       
+\usepackage{amsfonts}     	
+\usepackage{amssymb}
+
+% Paquetes para manejo de gráficas y figuras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Para insertar gráficas
+\usepackage{graphicx}     	
+
+% Para colocar varias subfiguras
+\usepackage[lofdepth,lotdepth]{subfig}
+
+% Para crear gráficos vectoriales con un lenguaje descriptivo/geométrico
+\usepackage{tikz}
+
+% Para crear circuitos vectoriales basados en TikZ
+\usepackage[american]{circuitikz}
+
+% Paquetes relacionados con el estilo 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Para la presentación correcta de magnitudes y unidades
+\usepackage{siunitx}	
+
+% Para hipervínculos y marcadores
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue,citecolor=green]{hyperref}
+	\urlstyle{same}
+
+% Para ubicar las tablas y figuras justo después del texto
+\usepackage{float}	
+
+% Para hacer tablas más estilizadas
+\usepackage{booktabs}		
+
+% Para hacer secciones con múltiples columnas
+\usepackage{multicol}
+
+% Para insertar código fuente estilizado
+\usepackage{listings}
+	\lstset{basicstyle=\ttfamily,breaklines=true}
+    \lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=6pt}
+
+% Para agregar código con formato de Matlab
+%\usepackage[numbered,autolinebreaks]{mcode}
+
+% Para utilizar el número de páginas
+\usepackage{lastpage}
+
+% Para manejar los encabezados y pies de página
+\usepackage{fancyhdr}
+	% Contenido de los encabezados y pies de pagina
+	\pagestyle{fancy}
+
+% Misceláneos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Para insertar símbolos extraños
+\usepackage{marvosym}
+
+%%libreria tikz
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}

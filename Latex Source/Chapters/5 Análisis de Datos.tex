@@ -1,0 +1,84 @@
+\section{Análisis de datos}
+Respecto a los datos informados, se pueden extraer algunas estadísticas.
+
+\subsection{Mediciones efectuadas}
+De las más de 200 mediciones, en principio, se observa una característica similar a la gaussiana, el cual los valores más relevantes son:
+
+\begin{itemize}
+    \item $\bar{m} = 0.536365$ $mW$/$cm^2$
+    \item $m_{min} = 0.005$ $mW$/$cm^2$
+    \item $m_{max} = 5.34 $ $mW$/$cm^2$
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth]{images/mediciones.png}
+\caption{Histograma de las mediciones en altura del suelo.}
+\label{5.0}
+\end{figure}
+
+Respecto a las mediciones hechas en altura, la medición más alta fue de:
+
+\begin{itemize}
+    \item $mh_{max} = 14.876 $ $mW$/$cm^2$
+\end{itemize}
+
+A pesar de ser un valor alto, apenas alcanza al $0.15$\% del límite de $1000$ $mW/cm^2$.
+
+\subsubsection*{Antenas}
+Respecto a la visualización de las antenas transmisoras provenientes de distintos tipos sistemas de comunicación, los datos que se extraen son los de la altura de la instalación, el cual se estimaba  de manera independiente según la altura del edificio o torre a la cual estaba situada:
+
+\begin{itemize}
+    \item $\bar{T} = 34$ $m$
+    \item $T_{min} = 6.5$ $m$
+    \item $T_{max} = 135 $ $m$
+\end{itemize}
+
+\subsubsection*{Distancia entre mediciones y antenas}
+Por otro lado, si se desea encontrar una relación entre las mediciones efectuadas, la potencia de la antena, y la distancia relativa entre medición y fuente transmisora, se debe tener en cuenta la curvatura de la tierra ya que se tiene datos de coordenadas en latitud y longitud. Para ello se recurre al método de Haversine, ampliamente utilizado para el tránsito aéreo. El problema es que este método posee un gran error en distancias cortas, es por eso que se utiliza su versión de tierra plana, el cual, a partir de las longitudes y latitudes de los dos puntos en cuestión, se puede calcular la distancia entre ellos. \\
+
+Sea $R$ el radio del planeta Tierra:
+
+
+\begin{equation}
+\notag
+    \Delta long = long_2-long_1
+\end{equation}
+
+\begin{equation}
+\notag
+    a = sin(lat_1)\cdot sin(lat_2)
+\end{equation}
+
+\begin{equation}
+\notag
+    b = cos(lat_1)\cdot cos(lat_2)\cdot cos(\Delta long)
+\end{equation}
+
+\begin{equation}
+\notag
+    cos(c) = a + b
+\end{equation}
+
+La distancia entre puntos es:
+
+\begin{equation}
+\notag
+    d = R\cdot c
+\end{equation}
+
+Siendo $h$ la altura de la antena, la distancia entre esta última y el punto de medición es:
+
+\begin{equation}
+\notag
+    r = \sqrt{d^2 +h^2}
+\end{equation}
+
+Con esta distancia, se podría estimar el valor de la potencia en juego de la antena, suponiendo que es el único elemento que produce radiación. Siendo $s$ la densidad de potencia medida, la potencia de transmisión $P$ es:
+
+\begin{equation}
+\notag
+    P = s\cdot 4\cdot \pi \cdot r^2 [mW]
+\end{equation}
+
+Siempre y cuando se suponga que la antena irradie de manera isotrópica, el cual la potencia de la señal se atenúa con el cuadrado de la distancia. 

@@ -1,0 +1,74 @@
+\section{Protocolo para la medición}
+
+\subsection{Evaluación del entorno}
+Antes de realizar cada medición, se lleva a cabo un relevamiento visual del lugar de los puntos a medir, corroborando la posición del sistema radiante (en este caso, antenas de telefonía y radio) y determinando los puntos de mayor riesgo. 
+
+\subsection{Selección de los puntos de medición}
+Los puntos de medición, idealmente, se deben elegir presentando una línea de visión del objeto radiante (LOS - Line of Sight). 
+
+No obstante, la medición se efectúa en los puntos accesibles al público en general, es decir, en las calles de la ciudad, preferentemente en las esquinas. Por lo tanto, se estaría tratando sin línea de visión del objeto radiante (NLOS - Non Line of Sight), en el cual la trayectoria de la onda es parcialmente obstruida entre la ubicación del transmisor de la señal y la ubicación del receptor. Los obstáculos incluyen árboles, edificios y otras estructuras u objetos construidos por el hombre u obra de la naturaleza.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{images/Line-of-Sight-(LOS) (1).png}
+\caption{Líneas de vista.}
+\label{2.0}
+\end{figure}
+
+\subsection{Medición}
+La inmisión es la radiación resultante del aporte de todas las fuentes de radiofrecuencia cuyos campos están presentes en el punto de medición. Se procede de la siguiente manera: se mide el nivel pico máximo de la componente de los campos eléctrico, magnético o de la densidad de potencia, a lo largo de una línea vertical que representa la altura del cuerpo humano en el punto de medición, para lo cual se debe:
+
+\begin{enumerate}
+    \item Realizar sobre el punto a verificar un barrido de mediciones de valor pico desde una altura de 20 cm por encima del suelo, a velocidad lenta y constante, hasta una altura de 2 m. Si el valor pico máximo de dichas mediciones resulta inferior al 50\%  de la MEP más estricta, se registrará como valor de ese punto. Si dicho valor supera el citado 50\% de la MEP más estricta, se deberá realizar una medición con promediado temporal como se indica a continuación:
+    \item Si el valor pico máximo supera el valor de un 50\% de la norma más estricta, se seleccionará a criterio propio 5 alturas distantes 20 cm entre sí y que no separen los 2 m, en los cuales medirá las componentes de campo E, H y/o densidad de potencia S según corresponda. A cada altura se realizará una promediación temporal a lo largo de un período de 6 minutos registrándose los valores medidos y su altura.
+\end{enumerate}
+
+
+\subsection*{Valores límites}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\begin{tabular}[c]{@{}c@{}}Rango de Frecuencia\\  f(MHz)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Densidad de Potencia \\ Equivalente \\ de Onda \\ S($mW/cm^2$)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Campo Eléctrico\\  E ($V/m$)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Campo Magnético H\\  ($A/m$)\end{tabular} \\ \hline
+0,3-1                                                                 & $20$                                                                                                   & $275$                                                                & $0,73$                                                               \\ \hline
+1-10                                                                  & $20/f^2$                                                                                               & $275/f$                                                              & $0,73/f$                                                             \\ \hline
+10-400                                                                & $0,2$                                                                                                  & $27,5$                                                               & $0,073$                                                              \\ \hline
+400-2000                                                              & $f/2000$                                                                                               & $1,375 f/2$                                                          & -                                                                    \\ \hline
+2000-100000                                                           & $1$                                                                                                    & $61,4$                                                               & -                                                                    \\ \hline
+\end{tabular}
+\caption{Valores límite.}
+\label{tab:1}
+\end{center}
+\end{table}
+
+\subsection*{Instrumento de Medición}
+El equipo que se utiliza para realizar las mediciones de RNI es el LATNEX HF-B8G, que es capaz de medir y monitorear la intensidad del campo electromagnético de radiofrecuencia desde $10$MHz a $8$GHz en cada uno de los ejes (X, Y, Z) de manera isotrópica. Este aparato es ideal para la medición de la densidad de potencia de radiación que emiten las antena de telefonía y radio.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth]{images/equipo_1.png}
+\caption{Equipo a utilizar.}
+\label{2.2}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\linewidth]{images/equipo_2.png}
+\caption{Característica trieje del instrumento.}
+\label{2.3}
+\end{figure}
+
+
+\subsection*{Flujograma}
+El siguiente diagrama resume el procedimiento a realizar:
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\linewidth]{images/flujograma.png}
+\caption{Flugrama del protocolo de medición.}
+\label{2.4}
+\end{figure}
+

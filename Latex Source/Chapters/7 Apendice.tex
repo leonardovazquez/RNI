@@ -1,0 +1,12 @@
+\subsection{Procedimiento de subida de datos}
+Para poder obtener las gráficas de los mapas y las estadísticas de los datos se recurre al siguiente procedimiento:
+
+\begin{enumerate}
+    \item Se realizan las mediciones y se mide la altura de cada sistema de comunicación.
+    \item Se comienza un proyecto en Google Earth y se cargan las posiciones de cada medición y de cada antena. Los nombres de las mediciones en suelo comienzan con 'M' y los de altura en 'H'. Los nombres de las antenas deben comenzar con 'A' o 'T'. 
+    \item Las mediciones se detallan numéricamente con la unidad $mW/cm^2$, y de manera análoga con la altura de las antenas en metros $m$.
+    \item Se exporta el archivo del proyecto con el nombre 'RNI.kml'. Este formato debe ser manipulado para extraer los datos. Para ello se emplea el cuaderno (notebook) con scripts de Python en alguna herramienta para poder correr el programa. Por ejemplo, Jupyter Notebook, Visual Studio Code, Google Colab, etc. 
+    \item Hay que preinstalar la última versión de Python y las siguientes librerias mediante el comando 'pip install xxxx': pykml, pandas, seaborn, numpy, matplotlib, folium, math, datetime. 
+    \item Se coloca el archivo 'RNI.kml' en la carpeta del entorno de trabajo a donde está el cuaderno (notebook) con scripts de Python. Se ejecuta el programa, script por script, según la tarea que se quiera realizar.
+\end{enumerate}
+

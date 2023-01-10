@@ -1,0 +1,59 @@
+\documentclass[12pt,letterpaper]{article}  
+%%%%%%%%INSTALACION DE PAQUETES%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{config}
+
+
+
+\lhead{Laboratorio de Comunicaciones}
+	\chead{}
+	\rhead{2022}
+	%\lfoot{Facultad de Ingeniería}
+	\cfoot{\thepage\ de \pageref{LastPage}}
+	%\rfoot{Universidad Nacional de Mar del Plata}
+
+% Comandos especiales
+\newcommand{\EIE}{\textsc{Facultad \Lightning~ Ingeniería}}
+%---------------INICIO DE DOCUMENTO--------------
+\begin{document}
+
+% portada
+\begin{titlepage}
+                \input{portada}
+\end{titlepage}
+
+%\maketitle
+%\thispagestyle{empty} 
+%\maketitle
+
+{
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+}
+
+% RESUMEN
+%\section*{Resumen}
+
+%\setlength{\parindent}{14.49998pt}
+%\setlegtth{\parindent}{0}
+\setlength{\parindent}{0cm}
+\newpage
+%\input{Chapters/-1 ejemplos}
+\input{Chapters/0 Resumen y objetivos}
+%\input{Chapters/1 Banco de Medición}
+\newpage
+\input{Chapters/1 Fundamentos Teóricos}
+\newpage
+\input{Chapters/2 Protocolo para la Medición}
+\newpage
+\input{Chapters/4 Mediciones Efectuadas}
+\newpage
+\input{Chapters/5 Análisis de Datos}
+\newpage
+\input{Chapters/7 Apendice}
+\newpage
+\input{Chapters/6 Conclusiones}
+\newpage
+
+
+
+\end{document}

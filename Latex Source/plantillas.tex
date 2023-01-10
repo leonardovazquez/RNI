@@ -1,0 +1,43 @@
+
+%                PLANTILLAS
+
+%ECUACION
+
+\begin{equation}
+\label{eq:1}
+a(s) = \frac{a_o}{(1+\frac{s}{\omega_a})\cdot (1+\frac{s}{\omega_b})\cdot (1+\frac{s}{\omega_c})} 
+\end{equation}
+
+%LISTA
+\begin{enumerate}
+\item Onda senoidal.
+\item Onda triangular.
+\item Onda cuadrada.
+\end{enumerate}       %%puede ser itemize o item
+
+%%IMAGEN
+
+\begin{figure}[h]
+\centering
+\fbox{\includegraphics[width=0.5\linewidth]{images/claseB/simple.png}}
+\caption{Amplificador Clase B básico con fuente simple.}
+\label{1.0}
+\end{figure}
+
+%%tabla
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Parámetro & Analíticamente & Práctica        & Diferencia (Error) \\ \hline
+MG        & $7.56dB$       & $7.43dB$        & $0.065dB$          \\ \hline
+MF        & $22.7^{\circ}$ & $25.38^{\circ}$ & $2.688^{\circ}$    \\ \hline
+$SP$      & $53\%$         & $80\%$          & $27\%$             \\ \hline
+$t_r$     & $371us$        & $400us$         & $29us$             \\ \hline
+\end{tabular}
+\caption{Comparación de resultados obtenidos. Caso continuo.}
+\label{tab:1}
+\end{center}
+\end{table}
